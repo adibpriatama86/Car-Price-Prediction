@@ -1,51 +1,61 @@
-# Car Price Prediction
+# Car Price Prediction using Machine Learning
 
 ## Overview
-This project aims to predict car prices using machine learning techniques. The dataset contains information about various car brands, models, and features. The goal is to build a model that accurately estimates the price of a car based on its attributes.
+This project aims to predict car prices using various machine learning models, including **Linear Regression, Random Forest, and XGBoost**. After experimenting with multiple models, **XGBoost with hyperparameter tuning achieved the best performance**.
 
 ## Dataset
 The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com/datasets/asinow/car-price-dataset) and includes the following columns:
-
-- **Brand**: Car manufacturer (e.g., Toyota, Honda, BMW)
-- **Model**: Specific car model
-- **Year**: Manufacturing year
-- **Engine_Size**: Engine capacity in liters
-- **Fuel_Type**: Type of fuel used (Petrol, Diesel, etc.)
-- **Transmission**: Type of transmission (Manual, Automatic)
-- **Mileage**: Total distance the car has traveled
-- **Doors**: Number of doors in the car
-- **Owner_Count**: Number of previous owners
-- **Price**: The target variable (car price in currency unit)
+- **Brand**
+- **Model**
+- **Year**
+- **Engine_Size**
+- **Fuel_Type**
+- **Transmission**
+- **Mileage**
+- **Doors**
+- **Owner_Count**
+- **Price** (Target Variable)
 
 ## Steps
-1. **Data Preparation**
-   - Handling missing values
-   - Data cleaning & feature selection
-2. **Exploratory Data Analysis (EDA)**
-   - Visualizing price distribution
-   - Correlation heatmap
-3. **Model Training**
-   - Implemented **Linear Regression** and **Random Forest** models
-   - Splitting data into training & testing sets
-4. **Evaluation**
-   - Used **Mean Squared Error (MSE)** and **R² Score** to assess performance
+1. **Data Preparation**: Handling missing values, feature encoding, and scaling.
+2. **Exploratory Data Analysis (EDA)**: Understanding distributions, correlations, and feature importance.
+3. **Model Training & Evaluation**:
+   - **Linear Regression** (Baseline model)
+   - **Random Forest** (Tree-based model)
+   - **XGBoost** (Final best-performing model)
+4. **Hyperparameter Tuning** (for XGBoost) using `RandomizedSearchCV`.
 
 ## Results
-- **Linear Regression**: R² Score = **0.9995**, MSE = **4213.92**
-- **Random Forest**: R² Score = **0.9679**, MSE = **294827.40**
-- Linear Regression achieved a near-perfect R² score, but this might indicate overfitting.
-- Random Forest performed well but had a higher MSE, suggesting it could benefit from hyperparameter tuning.
+### **1️⃣ Baseline Models**
+- **Linear Regression**
+  - R² Score: **0.9995**
+  - MSE: **4213.92**
+- **Random Forest**
+  - R² Score: **0.9708**
+  - MSE: **268439.56** (after tuning)
+
+### **2️⃣ Best Performing Model: XGBoost**
+- **Final XGBoost Results (After Hyperparameter Tuning):**
+  - **R² Score**: **0.9970**
+  - **MSE**: **27948.18**
+  - **Best Parameters**:  
+    ```json
+    {
+      'subsample': 0.8,
+      'n_estimators': 200,
+      'max_depth': 5,
+      'learning_rate': 0.1,
+      'colsample_bytree': 1.0
+    }
+    ```
 
 ## Visualizations
-- **Price Distribution**
-- **Correlation Heatmap**
-- **Feature Importance (Random Forest)**
-- **Actual vs Predicted Prices**
+![actual vs predicted](https://github.com/user-attachments/assets/e7997125-15cd-432a-8dcd-91e06acc7a4b)  
+*(Example of a scatter plot comparing actual vs predicted prices)*
 
 ## Requirements
-To run this project, you need:
-- **Python 3.x**
-- Libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`
+- Python 3.x
+- Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, XGBoost
 
 ## How to Run
 1. **Clone this repository**:
@@ -53,31 +63,21 @@ To run this project, you need:
    git clone https://github.com/adibpriatama86/Car-Price-Prediction.git
    ```
 2. **Open the Jupyter Notebook or Google Colab**:
-   - Jupyter Notebook: `car_price_prediction.ipynb`
-   - Google Colab: [Colab Link](https://colab.research.google.com/drive/1FetYxk20kqxsh44fPS8EzhR92Dpr6h3w?usp=drive_link)
+   - Jupyter Notebook: `Car_Price_Prediction.ipynb`
+   - Google Colab: [Colab Link](https://colab.research.google.com/drive/1HPJ97Q962sZvolwofGas-zeHwHBUBi37?usp=sharing)
 3. **Run all cells to see results**
 
-
-## Future Improvements
-- Try other models like **Gradient Boosting** or **XGBoost** for better accuracy.
-- Hyperparameter tuning for Random Forest.
-- Implement feature engineering for better insights.
-
-## Repository
-All the code and analysis are available in this GitHub repository: [GitHub Link](https://github.com/adibpriatama86/Car-Price-Prediction.git)
+## Key Takeaways
+- **XGBoost significantly outperformed other models** after tuning.
+- **Feature selection & proper hyperparameter tuning** greatly improved accuracy.
+- **Linear Regression, while highly accurate, showed signs of overfitting**.
 
 ---
-**Feel free to contribute or provide feedback! 🚀**
+🚀 **Future Work:**
+- Experiment with **Deep Learning models** (e.g., Neural Networks)
+- Add more **feature engineering techniques** for better accuracy
+- Deploy the model as a **web app** for real-world predictions!
 
-
-**Author: Ilham Adib Priatama**
+👨‍💻 **Author:** Ilham Adib Priatama
 
 **Contact:** [LinkedIn](http://linkedin.com/in/ilhamadibpriatama)
-
----
-
-**Attachments:**
-
-
-![heatmap korelasi](https://github.com/user-attachments/assets/1bedd38f-66d0-4414-9596-217a97a5f3ed)
-![actual vs predicted](https://github.com/user-attachments/assets/e7997125-15cd-432a-8dcd-91e06acc7a4b)
