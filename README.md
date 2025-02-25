@@ -50,7 +50,7 @@ The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com
     ```
 
 ## Visualizations
-![actual vs predicted](https://github.com/user-attachments/assets/e7997125-15cd-432a-8dcd-91e06acc7a4b)  
+![scatter plot](https://github.com/user-attachments/assets/c61ce5c4-98fc-4db6-93af-f04f5f09955d)
 *(Example of a scatter plot comparing actual vs predicted prices)*
 
 ## Requirements
