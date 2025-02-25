@@ -31,9 +31,16 @@ The dataset used in this project is sourced from [Kaggle](https://www.kaggle.com
    - Used **Mean Squared Error (MSE)** and **R² Score** to assess performance
 
 ## Results
-- **Linear Regression**: R² Score = 0.91, MSE = 15,243
-- **Random Forest**: R² Score = 0.99, MSE = 4,213
-- Random Forest performed significantly better than Linear Regression in terms of accuracy.
+- **Linear Regression**: R² Score = **0.9995**, MSE = **4213.92**
+- **Random Forest**: R² Score = **0.9679**, MSE = **294827.40**
+- Linear Regression achieved a near-perfect R² score, but this might indicate overfitting.
+- Random Forest performed well but had a higher MSE, suggesting it could benefit from hyperparameter tuning.
+
+## Visualizations
+- **Price Distribution**
+- **Correlation Heatmap**
+- **Feature Importance (Random Forest)**
+- **Actual vs Predicted Prices**
 
 ## Requirements
 To run this project, you need:
@@ -50,18 +57,14 @@ To run this project, you need:
    - Google Colab: [Colab Link](https://colab.research.google.com/drive/1FetYxk20kqxsh44fPS8EzhR92Dpr6h3w?usp=drive_link)
 3. **Run all cells to see results**
 
-## Visualizations
-- **Price Distribution**
-- **Correlation Heatmap**
-- **Feature Importance (Random Forest)**
-
-## Repository
-All the code and analysis are available in this GitHub repository: [GitHub Link](https://github.com/adibpriatama86/car_price_prediction)
 
 ## Future Improvements
 - Try other models like **Gradient Boosting** or **XGBoost** for better accuracy.
 - Hyperparameter tuning for Random Forest.
 - Implement feature engineering for better insights.
+
+## Repository
+All the code and analysis are available in this GitHub repository: [GitHub Link](https://github.com/adibpriatama86/car_price_prediction)
 
 ---
 **Feel free to contribute or provide feedback! 🚀**
@@ -69,4 +72,12 @@ All the code and analysis are available in this GitHub repository: [GitHub Link]
 
 **Author: Ilham Adib Priatama**
 
-**Contact:**[LinkedIn](http://linkedin.com/in/ilhamadibpriatama)
+**Contact:** [LinkedIn](http://linkedin.com/in/ilhamadibpriatama)
+
+---
+
+**Attachments:**
+
+
+![heatmap korelasi](https://github.com/user-attachments/assets/1bedd38f-66d0-4414-9596-217a97a5f3ed)
+![actual vs predicted](https://github.com/user-attachments/assets/e7997125-15cd-432a-8dcd-91e06acc7a4b)
