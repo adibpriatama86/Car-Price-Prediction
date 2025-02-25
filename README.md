@@ -50,7 +50,7 @@ To run this project, you need:
 ## How to Run
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/adibpriatama86/Car_Price_Prediction.git
+   git clone https://github.com/adibpriatama86/Car-Price-Prediction.git
    ```
 2. **Open the Jupyter Notebook or Google Colab**:
    - Jupyter Notebook: `car_price_prediction.ipynb`
@@ -64,7 +64,7 @@ To run this project, you need:
 - Implement feature engineering for better insights.
 
 ## Repository
-All the code and analysis are available in this GitHub repository: [GitHub Link](https://github.com/adibpriatama86/Car_Price_Prediction)
+All the code and analysis are available in this GitHub repository: [GitHub Link](https://github.com/adibpriatama86/Car-Price-Prediction.git)
 
 ---
 **Feel free to contribute or provide feedback! 🚀**
